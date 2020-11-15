@@ -1,0 +1,3 @@
+[submodule "content"]
+	path = content
+	url = https://github.com/willowell/blog-content.git
