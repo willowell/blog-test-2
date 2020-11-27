@@ -37,7 +37,9 @@ exports.createPages = ({ graphql, actions }) => {
 
         // Create blog posts & pages.
         const items = data.allFile.edges
+        
         const posts = items.filter(({ node }) => /posts/.test(node.name))
+        
         posts.forEach(({ node }) => {
           if (!node.remark) return
           const { path } = node.remark.frontmatter
@@ -48,6 +50,7 @@ exports.createPages = ({ graphql, actions }) => {
         })
 
         const pages = items.filter(({ node }) => /page/.test(node.name))
+        
         pages.forEach(({ node }) => {
           if (!node.remark) return
           const { name } = path.parse(node.path)

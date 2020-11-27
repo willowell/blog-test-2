@@ -20,7 +20,10 @@
         "node_modules/@types",
         "@types"
     ],
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "plugins": [
+      { "name": "typescript-plugin-tw-template" }
+    ]
   },
   "include": ["src/**/*", "types/**/*"],
   "exclude": ["node_modules", "public", ".cache", "**/*.spec.ts"]

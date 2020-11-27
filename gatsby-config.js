@@ -15,10 +15,6 @@ module.exports = {
 ///                                            META                                              ///
 ///==============================================================================================///
   plugins: [
-    'gatsby-plugin-react-helmet',
-    
-    'gatsby-plugin-netlify',
-
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -44,9 +40,15 @@ module.exports = {
       },
     },
 
+    'gatsby-plugin-react-helmet',
+    
+    'gatsby-plugin-netlify',
+
     'gatsby-plugin-sitemap',
 
     'gatsby-plugin-offline',
+
+    //TODO: RSS Feed?
 
 
 ///==============================================================================================///
@@ -123,12 +125,20 @@ module.exports = {
     },
 
     'gatsby-plugin-catch-links',
+
+
+///==============================================================================================///
+///                                           SEARCH                                             ///
+///==============================================================================================///
     
+    //TODO
+
 ///==============================================================================================///
 ///                                         TYPESCRIPT                                           ///
 ///==============================================================================================///
     'gatsby-plugin-typescript',
 
+    /// GraphQL Type Code Generation
     {
       resolve: 'gatsby-plugin-graphql-codegen',
       options: {
@@ -137,8 +147,19 @@ module.exports = {
     },
 
 ///==============================================================================================///
-///                                            SASS                                              ///
+///                                          STYLING                                             ///
 ///==============================================================================================///
     'gatsby-plugin-sass',
+
+    'gatsby-plugin-postcss',
+
+    'gatsby-plugin-tailwindcss',
+
+    {
+      resolve: 'gatsby-plugin-purgecss',
+      options: {
+        tailwind: true
+      }
+    }
   ],
 }
